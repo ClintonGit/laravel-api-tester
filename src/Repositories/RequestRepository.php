@@ -7,6 +7,7 @@ use Asvae\ApiTester\Contracts\RequestRepositoryInterface;
 use Asvae\ApiTester\Contracts\StorageInterface;
 use Asvae\ApiTester\Entities\RequestEntity;
 use Illuminate\Filesystem\Filesystem;
+use Illuminate\Support\Str;
 
 
 /**
@@ -82,7 +83,7 @@ class RequestRepository implements RequestRepositoryInterface
      */
     public function persist(RequestEntity $request)
     {
-        $request->setId(str_random());
+        $request->setId(Str::random(20));
         $this->requests->insert($request);
     }
 

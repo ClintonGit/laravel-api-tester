@@ -19,7 +19,7 @@ Those are short and easy to read. Take a look.
 Require this package with composer:
 
 ```
-composer require asvae/laravel-api-tester
+composer require ClintonGit/laravel-api-tester
 ```
 
 After updating composer, add the ServiceProvider to the providers array in config/app.php
